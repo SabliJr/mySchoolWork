@@ -18,5 +18,7 @@ void  *ft_memset (void *a, int c, size_t len)
 void  ft_bzero (void *a, size_t n)
 void  *ft_memcpy (void *dest, const void *src, size_t len)
 void  *ft_memmove (void *dest, const void *src, size_t len)
+size_t  ft_strlcpy (char *dst, const char *src, size_t len)
+size_t  ft_strlcat (char *dst, const char *src, size_t len)
 
 #endif
