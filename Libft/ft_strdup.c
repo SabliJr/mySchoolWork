@@ -18,11 +18,11 @@ char	*ft_strdup (const char *s)
 	size_t	i;
 
 	i = 0;
-	arr_cpy = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1));
+	arr_cpy = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!arr_cpy)
 		return (NULL);
-	while (*str != '\0')
-		arr_cpy[i++] = *str++;
+	while (*s != '\0')
+		arr_cpy[i++] = *s++;
 	arr_cpy[i] = '\0';
 	return (arr_cpy);
 }
