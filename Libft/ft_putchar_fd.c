@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 13:10:13 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 15:18:10 by sabakar-         ###   ########.fr       */
+/*   Created: 2023/11/18 13:44:55 by sabakar-          #+#    #+#             */
+/*   Updated: 2023/11/18 15:19:10 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
-void	*ft_memset(void *a, int c, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*y;
-
-	y = (unsigned char *)a;
-	if (a == NULL || len <= 0)
-		return (a);
-	while (len > 0)
-	{
-		*y = (unsigned char)c;
-		y++;
-		len--;
-	}
-	return (a);
+	write (fd, &c, 1);
 }

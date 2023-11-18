@@ -6,13 +6,13 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:30:47 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/16 02:00:37 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/18 15:26:44 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup (const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*arr_cpy;
 	size_t	i;
