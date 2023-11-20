@@ -6,13 +6,13 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:07:32 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/16 00:30:20 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/18 14:37:29 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc (size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total_size;
 	void	ptr;

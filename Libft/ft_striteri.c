@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 13:10:13 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 15:18:10 by sabakar-         ###   ########.fr       */
+/*   Created: 2023/11/18 14:17:15 by sabakar-          #+#    #+#             */
+/*   Updated: 2023/11/18 14:20:49 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
-void	*ft_memset(void *a, int c, size_t len)
+void	*ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned char	*y;
+	unsigned int	i;
 
-	y = (unsigned char *)a;
-	if (a == NULL || len <= 0)
-		return (a);
-	while (len > 0)
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	while (s[i])
 	{
-		*y = (unsigned char)c;
-		y++;
-		len--;
+		(*f)(i, s + i);
+		i++;
 	}
-	return (a);
 }
