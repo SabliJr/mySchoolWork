@@ -6,6 +6,12 @@
 # include <unistd.h>
 # include <stdint.h>
 
+typedef	s_listt
+{
+	void	*content;
+	struct s_list	*next;
+}	t_list;
+
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalunm(int c);
