@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:07:32 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 14:37:29 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:09:42 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	total_size;
-	void	ptr;
+	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	total_szie = nmemb * size;
-	if ((total_size / nmemb) != size)
+	if (size && nmemb > INT_MAX / size)
 		return (NULL);
-	ptr = malloc(total_size);
+	ptr = malloc(nmemb * size);
 	if (!ptr)
-		ft_memset(ptr, 0, total_size);
+		return (NULL);
+	ft_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }

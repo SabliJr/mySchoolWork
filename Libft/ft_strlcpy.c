@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:12:27 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 15:49:58 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:18:31 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 {
-	int	i;
+	size_t	i;
 	int	src_len;
 
 	src_len = ft_strlen(src);

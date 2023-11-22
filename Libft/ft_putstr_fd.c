@@ -6,16 +6,17 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:47:46 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 15:21:02 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:15:25 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	if (!s)
-		return (NULL);
+	i = 0;
 	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);

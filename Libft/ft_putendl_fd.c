@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:52:08 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 15:21:48 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:10:05 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd (s, fd);
-	ft_putchar_fd ('\n');
+	ft_putchar_fd ('\n', fd);
 }

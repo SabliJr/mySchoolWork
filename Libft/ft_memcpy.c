@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:09:33 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/18 15:12:42 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:11:47 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
-	int	i;
+	size_t	i;
 
 	if (!dest || !src)
 		return (NULL);
