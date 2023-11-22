@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 13:09:56 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/22 15:22:40 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:16:09 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	char	temp[1000000];
-	int		i;
+	size_t		i;
 
 	i = 0;
 	while (i < len)
