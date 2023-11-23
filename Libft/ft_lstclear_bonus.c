@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:33:29 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/22 15:21:54 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:25:16 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*l_ptr;
 
 	if (!lst || !del)
-		return (NULL);
+		return ;
 	while (*lst)
 	{
-		l_ptr = (*lst)->nex;
+		l_ptr = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		*lst = l_ptr;
 	}

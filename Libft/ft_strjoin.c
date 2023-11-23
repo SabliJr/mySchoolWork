@@ -19,9 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s_len;
 	int		total_len;
 
-	s_len = ft_strlen(s1);
 	if (!s1 || !s2)
 		return (NULL);
+	s_len = ft_strlen(s1);
 	total_len = ft_strlen(s1) + ft_strlen(s2);
 	new_arr = (char *)malloc(sizeof(char) * (total_len + 1));
 	if (!new_arr)

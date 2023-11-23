@@ -6,15 +6,15 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:10:34 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/21 10:17:21 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:27:56 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_List *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	_list;
+	t_list	*_list;
 
 	if (lst == NULL)
 		return (NULL);
