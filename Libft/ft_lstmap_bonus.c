@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 10:53:21 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/21 11:04:32 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:36:37 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
-	t_list	*stre;
+	t_list	*store;
 
 	if (!lst || !del || !f)
 		return (NULL);
