@@ -28,14 +28,14 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			lenght += ft_formates(args, str[i + 1]);
+			length += ft_formates(args, str[i + 1]);
 			i++;
 		}
 		else
 			length += ft_putchar(str[i]);
 		i++;
 	}
-	va_end(args, str);
+	va_end(args);
 	return (length);
 }
 
@@ -49,13 +49,13 @@ int	ft_formates(va_list args, const char formate)
 	else if (formate == 's')
 		length += ft_putstr(va_arg(args, char *));
 	else if (formate == 'p')
-		length += ft_putptr(va_arg(args, unsigned long long);
+		length += ft_putptr(va_arg(args, unsigned long long));
 	else if (formate == 'd' || formate == 'i')
 		length += ft_putnbr(va_arg(args, int));
 	else if (formate == 'u')
-		lelngth += ft_putnbr_unsigned(va_arg(args, unsigned int));
+		length += ft_putnbr_unsigned(va_arg(args, unsigned int));
 	else if (formate == 'x' || formate == 'X')
-		length += ft_puthex(va_arg(args, unsigned int));
+		length += ft_puthex(va_arg(args, unsigned int), formate);
 	else if (formate == '%')
 		length += ft_putpercentage();
 	return (length);
