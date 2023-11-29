@@ -6,7 +6,7 @@
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:17:19 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/27 13:22:20 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:16:35 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_formates(va_list args, const char formate);
 
 int	ft_printf(const char *str, ...)
 {
-	int	length;
-	int	i;
 	va_list	args;
+	int		length;
+	int		i;
 
 	i = 0;
 	length = 0;
@@ -42,8 +42,10 @@ int	ft_printf(const char *str, ...)
 int	ft_formates(va_list args, const char formate)
 {
 	int	length;
+	int	len;
 
 	length = 0;
+	len = 0;
 	if (formate == 'c')
 		length += ft_putchar(va_arg(args, int));
 	else if (formate == 's')
@@ -51,13 +53,12 @@ int	ft_formates(va_list args, const char formate)
 	else if (formate == 'p')
 		length += ft_putptr(va_arg(args, unsigned long long));
 	else if (formate == 'd' || formate == 'i')
-		length += ft_putnbr(va_arg(args, int));
+		(ft_putnbr(va_arg(args, int), &len), length += len);
 	else if (formate == 'u')
-		length += ft_putnbr_unsigned(va_arg(args, unsigned int));
+		(ft_putnbr_unsigned(va_arg(args, unsigned int), &len), length += len);
 	else if (formate == 'x' || formate == 'X')
 		length += ft_puthex(va_arg(args, unsigned int), formate);
 	else if (formate == '%')
 		length += ft_putpercentage();
 	return (length);
 }
-

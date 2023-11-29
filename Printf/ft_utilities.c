@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utilites_functions.c                            :+:      :+:    :+:   */
+/*   ft_utilities.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabakar- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:19:01 by sabakar-          #+#    #+#             */
-/*   Updated: 2023/11/27 13:22:25 by sabakar-         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:03:24 by sabakar-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static void	put_cnt_char(char c, int *len);
 
 int	ft_putchar(char c)
 {
@@ -24,43 +26,45 @@ int	ft_putpercentage(void)
 	return (1);
 }
 
-int ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
-  unsigned int  i;
+	unsigned int	i;
 
-  i = 0;
-  if (!s)
-  {
-    write(1, "NULL", 4);
-    return (6);
-  }
-
-  while (s[i])
-  {
-    write(1, &s[i], 1);
-    i++;
-  }
-  return (i);
+	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	else
+	{
+		while (s[i])
+		{
+			write(1, &s[i], 1);
+			i++;
+		}
+	}
+	return (i);
 }
 
-int ft_putnbr(int n)
+void	ft_putnbr(int n, int *len)
 {
-  unsigned int  i;
-  unsigned int  nbr;
+	unsigned int	nbr;
 
-  if (n < 0)
-  {
-    ft_putchar('-');
-    nbr = -n;
-    i++;
-  }
-  else
-    nbr = n;
-  if (nbr > 9)
-  {
-    ft_putnbr(nbr / 10);
-    i++;
-  }
-  ft_putchar((nbr % 10) + '0');
-  return (i);
+	if (n < 0)
+	{
+		put_cnt_char('-', len);
+		nbr = -n;
+	}
+	else
+		nbr = n;
+	if (nbr > 9)
+		ft_putnbr(nbr / 10, len);
+	put_cnt_char((nbr % 10) + '0', len);
+}
+
+static void	put_cnt_char(char c, int *len)
+{
+	write(1, &c, 1);
+	(*len)++;
 }
